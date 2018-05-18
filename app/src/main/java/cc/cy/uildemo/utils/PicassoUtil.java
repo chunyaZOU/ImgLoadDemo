@@ -1,4 +1,4 @@
-package cc.cy.uildemo;
+package cc.cy.uildemo.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -22,7 +22,7 @@ import okhttp3.Response;
 
 public class PicassoUtil {
     /**
-     * 优点
+     *
      * 1.可配置程度高
      * 2.自带内存磁盘二级缓存（高速缓存，缓存大小取决于设备）
      * 3.多个数据源
@@ -41,9 +41,6 @@ public class PicassoUtil {
      * 本地缓存占到硬盘空间的2%但不超过50M并且不小于5M(前提是这种情况只在4.0以上有效果,或者你能像OKHttp那样提供一个本地缓存库来支持全平台)
      * Picasso默认开启3个线程来进行本地与网络之间的访问
      * Picasso加载图片顺序, 内存–>本地–>网络
-     * <p>
-     * <p>
-     * 缺点
      *
      * @param url
      * @param img

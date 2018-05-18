@@ -1,4 +1,4 @@
-package cc.cy.uildemo;
+package cc.cy.uildemo.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
