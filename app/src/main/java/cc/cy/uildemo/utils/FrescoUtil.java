@@ -27,9 +27,9 @@ public class FrescoUtil {
 
     /**
      * 1.使用fresco需要先初始化
-     * 2.底层使用c++代码 包体积更大
+     * 2.底层使用c++代码 不容易OOM 但包体积更大（3M左右）
      * 3.SimpleDraweeView does not support wrap_content for layout_width or layout_height attributes
-     * 4.xml中配置SimpleDraweeView属性，也可代码中配置 必须使用SimpleDraweeView
+     * 4.xml中配置SimpleDraweeView属性，也可代码中配置 必须使用SimpleDraweeView加载图片 后期修改麻烦
      * 5.自动回收内存
      * 6.三级缓存（解码与未解码与磁盘）
      * 7.支持场景多（动图、模糊、渐进、进度等）
@@ -37,6 +37,12 @@ public class FrescoUtil {
      * 9.允许解码时调整图片大小，默认只支持JPEG图，所以要设置该属性来支持png、jpg、webp。方法setDownsampleEnabled
      * 10.setHierarchy不要在同一个view上调用多次,即使view被回收
      * 11.可以通过Hierarchy设置图片加载行为
+     * 12.获取图片bitmap复杂
+     * 13.图片加载失败可重试（4次）
+     *
+     *
+     * 在5.0以下系统，Fresco将图片放到一个特别的内存区域。当然，在图片不显示的时候，占用的内存会自动被释放。
+     * 这会使得APP更加流畅，减少因图片内存占用而引发的OOM。
      *
      * @param context
      */
