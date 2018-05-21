@@ -22,7 +22,7 @@ public class GlideUtil {
      * 1.使用简单
      * 2.多数据源
      * 3.支持GIF、webp、video(本地)
-     * 4.认的内存和磁盘缓存 skipMemoryCache可跳过内存缓存  diskCacheStrategy(DiskCacheStrategy.NONE)可跳过磁盘缓存
+     * 4.默认的内存和磁盘缓存 skipMemoryCache可跳过内存缓存  diskCacheStrategy(DiskCacheStrategy.NONE)可跳过磁盘缓存
      * 5.支持优先级
      *
      * @param context
